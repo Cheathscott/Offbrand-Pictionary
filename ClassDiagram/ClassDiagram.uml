@@ -577,12 +577,31 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_ec4uYDKpEeyPDvbai1dABw" name="Database">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_S1qXIDUbEeyvoNGpH_w6Lg" name="fileName" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_rTSC8DKyEeyPDvbai1dABw" name="generateId">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_rTSC8TKyEeyPDvbai1dABw" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_rTWUYDKyEeyPDvbai1dABw" name="DatabaseFile"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_EZ-wsDUbEeyvoNGpH_w6Lg" name="addNewUser">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_JCRKcDUbEeyvoNGpH_w6Lg" name="username">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_K3lGQDUbEeyvoNGpH_w6Lg" name="password">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MSK08DUbEeyvoNGpH_w6Lg" name="usernameAlreadyExists">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_P9cM0DUbEeyvoNGpH_w6Lg" name="username">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Q1vGwDUbEeyvoNGpH_w6Lg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_ffCH4DKpEeyPDvbai1dABw" name="Server">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_dux8IDKyEeyPDvbai1dABw" name="serverStarted"/>
@@ -999,10 +1018,6 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_8MdScDUWEeyvoNGpH_w6Lg" name="drawWord" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_fGDnMjUaEeyvoNGpH_w6Lg" name="server" type="_ffCH4DKpEeyPDvbai1dABw" association="_fGCZEDUaEeyvoNGpH_w6Lg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fGE1UDUaEeyvoNGpH_w6Lg"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fGE1UTUaEeyvoNGpH_w6Lg" value="1"/>
-    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_-mBK0DUWEeyvoNGpH_w6Lg" name="DrawData">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_A0oXcDUXEeyvoNGpH_w6Lg" name="word">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -1316,5 +1331,9 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fGDnMTUaEeyvoNGpH_w6Lg" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_fGE1UjUaEeyvoNGpH_w6Lg" name="drawdata" type="_tQwvMDUWEeyvoNGpH_w6Lg" association="_fGCZEDUaEeyvoNGpH_w6Lg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fGDnMjUaEeyvoNGpH_w6Lg" name="server" type="_ffCH4DKpEeyPDvbai1dABw" association="_fGCZEDUaEeyvoNGpH_w6Lg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fGE1UDUaEeyvoNGpH_w6Lg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fGE1UTUaEeyvoNGpH_w6Lg" value="1"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Model>
